@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerLens AI | Your Career Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">C</div>
+                <div>
+                    <h2>CareerLens<span>AI</span></h2>
+                    <p>Your career companion</p>
+                </div>
+            </div>
+
+            <nav class="navigation">
+                <p class="nav-label">WORKSPACE</p>
+
+                <a href="#" class="nav-link active" data-page="dashboard">
+                    <span>⌂</span> Dashboard
+                </a>
+
+                <a href="#" class="nav-link" data-page="cv-builder">
+                    <span>▤</span> CV Builder
+                </a>
+
+                <a href="#" class="nav-link" data-page="job-match">
+                    <span>◎</span> Job Match Checker
+                </a>
+
+                <a href="#" class="nav-link" data-page="interview">
+                    <span>☰</span> Interview Practice
+                </a>
+
+                <a href="#" class="nav-link" data-page="applications">
+                    <span>▣</span> Job Applications
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="help-icon">?</div>
+                <div>
+                    <strong>Keep moving forward!</strong>
+                    <p>Your next opportunity awaits.</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">YOUR CAREER JOURNEY</p>
+                    <h1>Welcome to CareerLens AI</h1>
+                    <p class="header-subtitle">
+                        Everything you need to prepare for your next opportunity.
+                    </p>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar">C</div>
+                    <div>
+                        <strong>Career Explorer</strong>
+                        <p>Job Seeker</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Page -->
+            <section id="dashboard" class="page active-page">
+
+                <div class="welcome-banner">
+                    <div>
+                        <p class="banner-label">YOUR FUTURE STARTS HERE</p>
+                        <h2>Ready for your next opportunity?</h2>
+                        <p>
+                            Build your CV, discover your strengths and
+                            prepare confidently for your next job.
+                        </p>
+                        <button class="primary-button" data-go="cv-builder">
+                            Build My CV <span>→</span>
+                        </button>
+                    </div>
+
+                    <div class="banner-decoration">✦</div>
+                </div>
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Your Career Toolkit</h2>
+                        <p>Choose a tool to get started.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+
+                    <article class="tool-card">
+                        <div class="tool-icon cv-icon">▤</div>
+                        <h3>CV Builder</h3>
+                        <p>Create a professional CV that presents your skills and experience.</p>
+                        <button class="text-button" data-go="cv-builder">
+                            Create your CV →
+                        </button>
+                    </article>
+
+                    <article class="tool-card">
+                        <div class="tool-icon match-icon">◎</div>
+                        <h3>Job Match Checker</h3>
+                        <p>Compare your CV with a job description and find missing keywords.</p>
+                        <button class="text-button" data-go="job-match">
+                            Check job match →
+                        </button>
+                    </article>
+
+                    <article class="tool-card">
+                        <div class="tool-icon interview-icon">☰</div>
+                        <h3>Interview Practice</h3>
+                        <p>Practise common interview questions and prepare your answers.</p>
+                        <button class="text-button" data-go="interview">
+                            Start practising →
+                        </button>
+                    </article>
+
+                    <article class="tool-card">
+                        <div class="tool-icon application-icon">▣</div>
+                        <h3>Job Applications</h3>
+                        <p>Keep track of the jobs you apply for and your application progress.</p>
+                        <button class="text-button" data-go="applications">
+                            Track applications →
+                        </button>
+                    </article>
+
+                </div>
+
+                <div class="bottom-note">
+                    <span>✦</span>
+                    Small steps today can create big opportunities tomorrow.
+                </div>
+
+            </section>
+
+            <!-- Other pages will be built in later steps -->
+            
+<section id="cv-builder" class="page">
+
+    <div class="section-heading">
+        <div>
+            <h2>Build Your Professional CV</h2>
+            <p>Enter your details to create a CV you can share with employers.</p>
+        </div>
+    </div>
+
+    <div class="cv-layout">
+
+        <form id="cv-form" class="cv-form">
+
+            <h3>Personal Information</h3>
+
+            <label for="cv-name">Full Name</label>
+            <input type="text" id="cv-name" placeholder="e.g. Deborah Chukwuka" required>
+
+            <label for="cv-email">Email Address</label>
+            <input type="email" id="cv-email" placeholder="you@example.com" required>
+
+            <label for="cv-phone">Phone Number</label>
+            <input type="tel" id="cv-phone" placeholder="Your phone number">
+
+            <label for="cv-location">Location</label>
+            <input type="text" id="cv-location" placeholder="e.g. Awka, Anambra State">
+
+            <label for="cv-summary">Professional Summary</label>
+            <textarea id="cv-summary" rows="4"
+                placeholder="Briefly introduce yourself, your strengths and career goals."></textarea>
+
+            <h3>Education</h3>
+
+            <label for="cv-education">Education and Qualifications</label>
+            <textarea id="cv-education" rows="3"
+                placeholder="School, qualification and graduation year"></textarea>
+
+            <h3>Skills and Experience</h3>
+
+            <label for="cv-skills">Skills</label>
+            <textarea id="cv-skills" rows="3"
+                placeholder="Enter your skills, separated by commas"></textarea>
+
+            <label for="cv-experience">Work Experience or Projects</label>
+            <textarea id="cv-experience" rows="5"
+                placeholder="Describe your real work experience, projects or relevant responsibilities."></textarea>
+
+            <button type="submit" class="primary-button">
+                Generate CV Preview →
+            </button>
+
+        </form>
+
+        <div class="cv-preview-container">
+
+            <div class="cv-preview-heading">
+                <h3>CV Preview</h3>
+                <button type="button" id="print-cv" class="text-button">
+                    Print / Save PDF
+                </button>
+            </div>
+
+            <article id="cv-preview" class="cv-preview">
+
+                <h2 id="preview-name">Your Full Name</h2>
+
+                <p id="preview-contact" class="preview-contact">
+                    Your email · Your phone · Your location
+                </p>
+
+                <hr>
+
+                <h3>PROFESSIONAL SUMMARY</h3>
+                <p id="preview-summary">
+                    Your professional summary will appear here.
+                </p>
+
+                <h3>EDUCATION</h3>
+                <p id="preview-education">
+                    Your education will appear here.
+                </p>
+
+                <h3>SKILLS</h3>
+                <p id="preview-skills">
+                    Your skills will appear here.
+                </p>
+
+                <h3>EXPERIENCE & PROJECTS</h3>
+                <p id="preview-experience">
+                    Your experience and projects will appear here.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+            
+<section id="job-match" class="page">
+
+    <div class="section-heading">
+        <div>
+            <h2>Job Match Checker</h2>
+            <p>Discover how closely your CV matches a job description.</p>
+        </div>
+    </div>
+
+    <div class="match-intro">
+        <div class="match-intro-icon">◎</div>
+        <div>
+            <h3>Find your strengths. Spot your gaps.</h3>
+            <p>
+                Paste your CV and the job description. CareerLens will
+                compare keywords and help you identify areas to improve.
+            </p>
+        </div>
+    </div>
+
+    <div class="match-form">
+
+        <div class="match-field">
+            <label for="match-cv">Your CV</label>
+            <p class="field-hint">Paste the text from your CV below.</p>
+            <textarea
+                id="match-cv"
+                rows="12"
+                placeholder="Paste your CV here, including your skills, education and experience..."
+                required
+            ></textarea>
+            <span class="character-count" id="cv-word-count">0 words</span>
+        </div>
+
+        <div class="match-field">
+            <label for="match-job">Job Description</label>
+            <p class="field-hint">Paste the job advertisement or requirements.</p>
+            <textarea
+                id="match-job"
+                rows="12"
+                placeholder="Paste the job description here, including the responsibilities and required skills..."
+                required
+            ></textarea>
+            <span class="character-count" id="job-word-count">0 words</span>
+        </div>
+
+    </div>
+
+    <div class="match-actions">
+        <button type="button" id="analyze-match" class="primary-button">
+            Analyze My Match →
+        </button>
+        <button type="button" id="clear-match" class="secondary-button">
+            Clear Fields
+        </button>
+    </div>
+
+    <div id="match-results" class="match-results" hidden>
+
+        <div class="results-header">
+            <div>
+                <p class="eyebrow">YOUR ANALYSIS</p>
+                <h2>Job Match Results</h2>
+                <p class="field-hint">
+                    This score reflects keyword overlap, not a hiring prediction.
+                </p>
+            </div>
+            <div class="match-score-circle">
+                <span id="match-score">0%</span>
+                <small>keyword match</small>
+            </div>
+        </div>
+
+        <div class="score-track">
+            <div id="score-bar" class="score-fill"></div>
+        </div>
+
+        <div class="result-summary">
+            <h3 id="match-summary-title">Your results</h3>
+            <p id="match-summary"></p>
+        </div>
+
+        <div class="result-columns">
+
+            <div class="result-card">
+                <h3>✓ Matching Keywords</h3>
+                <p>Keywords found in both texts.</p>
+                <div id="matching-keywords" class="keyword-list"></div>
+            </div>
+
+            <div class="result-card">
+                <h3>＋ Keywords to Review</h3>
+                <p>Job-description keywords not found in your CV.</p>
+                <div id="missing-keywords" class="keyword-list"></div>
+            </div>
+
+        </div>
+
+        <div class="improvement-card">
+            <h3>Your Next Steps</h3>
+            <ul id="match-suggestions"></ul>
+        </div>
+
+        <p class="privacy-note">
+            Your text is analyzed in this browser. This tool does not send
+            your CV or job description to an external AI service.
+        </p>
+
+    </div>
+
+</section>
+
+
+           
+<section id="interview" class="page">
+
+    <div class="section-heading">
+        <div>
+            <h2>Interview Practice</h2>
+            <p>Build confidence before your next job interview.</p>
+        </div>
+    </div>
+
+    <div class="match-intro">
+        <div class="match-intro-icon">🎯</div>
+        <div>
+            <h3>Your interview practice room</h3>
+            <p>
+                Choose a job category, practise a question, and get
+                feedback on your answer using local assessment rules.
+            </p>
+        </div>
+    </div>
+
+    <div class="interview-setup">
+        <label for="interview-role">What type of role are you preparing for?</label>
+        <select id="interview-role">
+            <option value="general">General / Entry-Level</option>
+            <option value="technology">Technology / IT</option>
+            <option value="data">Data Analyst</option>
+            <option value="marketing">Marketing / Content Creation</option>
+            <option value="customer">Customer Service</option>
+        </select>
+
+        <label for="interview-type">Practice type</label>
+        <select id="interview-type">
+            <option value="mixed">Mixed Interview Questions</option>
+            <option value="behavioral">Behavioral Questions</option>
+            <option value="technical">Role-Specific Questions</option>
+        </select>
+
+        <button type="button" id="start-interview" class="primary-button">
+            Start Practice →
+        </button>
+    </div>
+
+    <div id="interview-room" class="interview-room" hidden>
+
+        <div class="interview-progress">
+            <span id="question-counter">Question 1 of 5</span>
+            <span id="interview-role-label">General / Entry-Level</span>
+        </div>
+
+        <div class="interview-progress-track">
+            <div id="interview-progress-bar"></div>
+        </div>
+
+        <div class="interview-question-card">
+            <p class="eyebrow">YOUR QUESTION</p>
+            <h3 id="interview-question">Tell me about yourself.</h3>
+            <p id="interview-question-tip">
+                Give a clear, relevant introduction.
+            </p>
+        </div>
+
+        <label for="interview-answer">Your answer</label>
+        <textarea
+            id="interview-answer"
+            rows="8"
+            placeholder="Write the answer you would give to the interviewer..."
+        ></textarea>
+
+        <div class="interview-actions">
+            <button type="button" id="check-interview-answer" class="primary-button">
+                Review My Answer
+            </button>
+            <button type="button" id="show-interview-hint" class="secondary-button">
+                Show Answer Tips
+            </button>
+        </div>
+
+        <div id="interview-hint" class="interview-feedback" hidden>
+            <h3>Tips for this question</h3>
+            <p id="interview-hint-text"></p>
+        </div>
+
+        <div id="interview-review" class="interview-feedback" hidden>
+            <h3>Your Answer Review</h3>
+            <p id="interview-review-summary"></p>
+
+            <div class="review-score">
+                <span id="interview-review-score">0/100</span>
+                <span>Answer structure score</span>
+            </div>
+
+            <h4>Things to improve</h4>
+            <ul id="interview-review-tips"></ul>
+
+            <button type="button" id="next-interview-question" class="primary-button">
+                Next Question →
+            </button>
+        </div>
+
+    </div>
+
+    <div id="interview-complete" class="interview-feedback" hidden>
+        <h3>Practice session complete! 🎉</h3>
+        <p id="interview-final-summary"></p>
+        <button type="button" id="restart-interview" class="primary-button">
+            Practise Again
+        </button>
+    </div>
+
+</section>
+
+
+           
+<section id="applications" class="page">
+
+    <div class="section-heading">
+        <div>
+            <h2>Job Applications Tracker</h2>
+            <p>Keep every application organised and know your next step.</p>
+        </div>
+    </div>
+
+    <div class="match-intro">
+        <div class="match-intro-icon">💼</div>
+        <div>
+            <h3>Your job search, organised.</h3>
+            <p>
+                Record the jobs you apply for, track progress and keep
+                important follow-up notes in one place.
+            </p>
+        </div>
+    </div>
+
+    <div class="application-stats">
+        <div class="application-stat">
+            <span>Total Applications</span>
+            <strong id="stat-total">0</strong>
+        </div>
+        <div class="application-stat">
+            <span>Applied</span>
+            <strong id="stat-applied">0</strong>
+        </div>
+        <div class="application-stat">
+            <span>Interviews</span>
+            <strong id="stat-interview">0</strong>
+        </div>
+        <div class="application-stat">
+            <span>Offers</span>
+            <strong id="stat-offer">0</strong>
+        </div>
+    </div>
+
+    <div class="application-form-card">
+        <h3 id="application-form-heading">Add a Job Application</h3>
+        <p class="field-hint">Fields marked * are required.</p>
+
+        <form id="application-form">
+
+            <input type="hidden" id="application-edit-id">
+
+            <div class="application-fields">
+
+                <div>
+                    <label for="application-title">Job Title *</label>
+                    <input
+                        type="text"
+                        id="application-title"
+                        placeholder="e.g. Junior Web Developer"
+                        required
+                        maxlength="120"
+                    >
+                </div>
+
+                <div>
+                    <label for="application-company">Company *</label>
+                    <input
+                        type="text"
+                        id="application-company"
+                        placeholder="e.g. Bright Technologies"
+                        required
+                        maxlength="120"
+                    >
+                </div>
+
+                <div>
+                    <label for="application-date">Date Applied *</label>
+                    <input type="date" id="application-date" required>
+                </div>
+
+                <div>
+                    <label for="application-status">Application Status *</label>
+                    <select id="application-status" required>
+                        <option value="Applied">Applied</option>
+                        <option value="Assessment">Assessment</option>
+                        <option value="Interview">Interview</option>
+                        <option value="Offer">Offer</option>
+                        <option value="Rejected">Rejected</option>
+                        <option value="Withdrawn">Withdrawn</option>
+                    </select>
+                </div>
+
+                <div class="application-full-width">
+                    <label for="application-link">Job Advertisement URL (optional)</label>
+                    <input
+                        type="url"
+                        id="application-link"
+                        placeholder="https://example.com/jobs/123"
+                        maxlength="1000"
+                    >
+                </div>
+
+                <div class="application-full-width">
+                    <label for="application-notes">Notes / Next Steps</label>
+                    <textarea
+                        id="application-notes"
+                        rows="3"
+                        placeholder="Contact person, follow-up date, interview details..."
+                        maxlength="2000"
+                    ></textarea>
+                </div>
+
+            </div>
+
+            <div class="application-form-actions">
+                <button type="submit" id="save-application" class="primary-button">
+                    Save Application
+                </button>
+                <button type="button" id="cancel-application-edit" class="secondary-button" hidden>
+                    Cancel Edit
+                </button>
+            </div>
+
+            <p id="application-form-message" role="status" aria-live="polite"></p>
+
+        </form>
+    </div>
+
+    <div class="application-list-card">
+
+        <div class="application-list-heading">
+            <div>
+                <h3>Your Applications</h3>
+                <p class="field-hint">Update a status as your job search progresses.</p>
+            </div>
+
+            <button type="button" id="export-applications" class="secondary-button">
+                Export CSV
+            </button>
+        </div>
+
+        <div class="application-filters">
+            <input
+                type="search"
+                id="application-search"
+                placeholder="Search job title or company..."
+                aria-label="Search applications"
+            >
+
+            <select id="application-filter" aria-label="Filter by application status">
+                <option value="All">All statuses</option>
+                <option value="Applied">Applied</option>
+                <option value="Assessment">Assessment</option>
+                <option value="Interview">Interview</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Withdrawn">Withdrawn</option>
+            </select>
+        </div>
+
+        <div id="application-list" class="application-list">
+            <p class="application-empty">
+                No applications yet. Add your first job above!
+            </p>
+        </div>
+
+        <p class="privacy-note">
+            Your application records are stored in this browser on this device.
+            They are not synced to an online account.
+        </p>
+
+    </div>
+
+</section>
+
+
+            <footer class="page-footer">
+                CareerLens AI © 2026 · Built to help you move forward.
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
